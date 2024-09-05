@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/content-service/content-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/content-service/content-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/content-service/content-biz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/content-service/content-biz/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/content-service/content-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/content-service/content-domain/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/content-service/domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/content-service/domain/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/content-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/content-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/oh_my_item/item-biz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/oh_my_item/item-biz/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/oh_my_item/item-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/oh_my_item/item-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/oh_my_item/item-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/oh_my_item/item-domain/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/oh_my_item/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/oh_my_item/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/oh_my_micor_cart/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/oh_my_micor_cart/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
