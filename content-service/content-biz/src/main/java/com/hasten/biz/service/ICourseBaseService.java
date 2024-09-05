@@ -1,5 +1,8 @@
 package com.hasten.biz.service;
 
+import com.hasten.common.domain.PageParams;
+import com.hasten.common.domain.PageResult;
+import com.hasten.domain.dto.QueryCourseParamsDto;
 import com.hasten.domain.entity.CourseBase;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -13,4 +16,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface ICourseBaseService extends IService<CourseBase> {
 
+
+    PageResult<CourseBase> queryCourseBaseList(PageParams pageParams, QueryCourseParamsDto queryCourseParamsDto);
 }
