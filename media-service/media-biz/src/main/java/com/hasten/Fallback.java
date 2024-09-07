@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-import static com.hasten.Block.BLK_SIZE;
 
 /**
  * @author Hasten
@@ -38,7 +37,7 @@ public class Fallback {
         this.threadPool = threadPool;
         this.sourceFile = file;
         this.sourceRaf = new RandomAccessFile(file, "r");
-        this.blkNum = (long) Math.ceil((double) sourceFile.length() / BLK_SIZE);
+        this.blkNum = (long) Math.ceil((double) sourceFile.length() / 123);
         this.chunkPath = this.sourceFile.getPath() + ".chunk";
     }
 
