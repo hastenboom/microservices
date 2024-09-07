@@ -9,11 +9,12 @@
 
     <name>Archetype - oh_my_micro</name>
     <url>http://maven.apache.org</url>
+    <modules>
+        <module>gateway-service</module>
+    </modules>
 
     <packaging>pom</packaging>
 
-    <modules>
-    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -86,6 +87,8 @@
                 <version>${validation.version}</version>
             </dependency>
 
+
+
         </dependencies>
     </dependencyManagement>
     <dependencies>
@@ -101,6 +104,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>

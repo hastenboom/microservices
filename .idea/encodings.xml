@@ -13,6 +13,15 @@
     <file url="file://$PROJECT_DIR$/content-service/domain/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/content-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/content-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/media-service/media-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/media-service/media-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/media-service/media-biz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/media-service/media-biz/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/media-service/media-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/media-service/media-domain/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/media-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/media-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/oh_my_item/item-biz/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/oh_my_item/item-biz/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/oh_my_item/item-client/src/main/java" charset="UTF-8" />
@@ -25,5 +34,13 @@
     <file url="file://$PROJECT_DIR$/oh_my_micor_cart/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/system-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/system-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/system-service/system-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/system-service/system-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/system-service/system-biz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/system-service/system-biz/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/system-service/system-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/system-service/system-domain/src/main/resources" charset="UTF-8" />
   </component>
 </project>

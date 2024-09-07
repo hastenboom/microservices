@@ -20,6 +20,14 @@
         <option value="$PROJECT_DIR$/content-service/domain/pom.xml" />
         <option value="$PROJECT_DIR$/content-service/content-domain/pom.xml" />
         <option value="$PROJECT_DIR$/content-service/content-biz/pom.xml" />
+        <option value="$PROJECT_DIR$/system-service/pom.xml" />
+        <option value="$PROJECT_DIR$/system-service/system-api/pom.xml" />
+        <option value="$PROJECT_DIR$/system-service/system-biz/pom.xml" />
+        <option value="$PROJECT_DIR$/system-service/system-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/media-service/pom.xml" />
+        <option value="$PROJECT_DIR$/media-service/media-api/pom.xml" />
+        <option value="$PROJECT_DIR$/media-service/media-biz/pom.xml" />
+        <option value="$PROJECT_DIR$/media-service/media-domain/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
