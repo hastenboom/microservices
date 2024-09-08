@@ -33,4 +33,16 @@ public class SimpleBQ<T> {
         notifyAll(); // 通知生产者队列有空间了
         return item;
     }
+
+    // 打印队列当前状态的方法
+    public synchronized void printQueueStatus() {
+        System.out.print("Current Queue Status: [");
+        for (int i = 0; i < queue.size(); i++) {
+            System.out.print(queue.get(i));
+            if (i < queue.size() - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+    }
 }

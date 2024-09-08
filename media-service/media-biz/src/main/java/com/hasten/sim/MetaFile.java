@@ -2,8 +2,8 @@ package com.hasten.sim;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import java.util.function.Predicate;
 
 import static com.hasten.sim.SingleFileUploader.CHUNK_SIZE;
 
@@ -15,7 +15,7 @@ public class MetaFile {
 
     public static final byte NOT_CHUNK = -2;
     public static final byte NOT_SEND = -1;
-    public static final byte SENDING = -0;
+    public static final byte SENDING = 0;
     public static final byte ACKED = 1;
 
     public static final long FILE_SIZE_OFFSET = 0;
@@ -45,21 +45,21 @@ public class MetaFile {
         metaFileUtil.writeLong(FILE_SIZE_OFFSET, srcFileUtil.getLength());
         metaFileUtil.writeInt(BLK_NUM_OFFSET, (int) srcFileUtil.getChunkCount(CHUNK_SIZE));
         for (int i = 1; i <= (int) srcFileUtil.getChunkCount(CHUNK_SIZE); i++) {
-            this.setBlkAck(i, NOT_SEND);
+            this.setChunkStatus(i, NOT_CHUNK);
         }
     }
 
-    public void setBlkAck(int blkNum, byte ack) {
-        metaFileUtil.writeByte(getBlkNumOffset(blkNum), ack);
+    public void setChunkStatus(int blkNum, byte status) {
+        metaFileUtil.writeByte(getChunkOffset(blkNum), status);
     }
 
 
-    private long getBlkNumOffset(int blkNum) {
+    private long getChunkOffset(int blkNum) {
         return FIRST_BLK_ACK_OFFSET + blkNum - 1;
     }
 
     //for debug
-    public void readMetaFile() {
+    public void printMetaFile() {
         long fileSize = metaFileUtil.readLong(FILE_SIZE_OFFSET);
         System.out.println("fileSize: " + fileSize);
 
@@ -67,25 +67,50 @@ public class MetaFile {
         System.out.println("blkNum: " + blkNum);
 
         for (int i = 1; i <= blkNum; i++) {
-            byte blkAck = metaFileUtil.readByte(getBlkNumOffset(i));
+            byte blkAck = metaFileUtil.readByte(getChunkOffset(i));
             System.out.println("blk" + i + "Ack: " + blkAck);
         }
     }
 
-    public byte checkBlkAck(int blkNum) {
-        return metaFileUtil.readByte(getBlkNumOffset(blkNum));
+    public byte checkChunkStatus(int blkNum) {
+        return metaFileUtil.readByte(getChunkOffset(blkNum));
     }
 
-    public List<Integer> getNotAckedBlkIdList() {
-        List<Integer> notAckedBlkIdList = new ArrayList<>();
+    public List<Integer> getStatusList(Predicate<Byte> predicate) {
+        List<Integer> ids = new ArrayList<>();
         int blkNum = metaFileUtil.readInt(BLK_NUM_OFFSET);
         for (int i = 1; i <= blkNum; i++) {
-            byte blkAck = metaFileUtil.readByte(getBlkNumOffset(i));
-            if (blkAck != ACKED) {
-                notAckedBlkIdList.add(i);
+            byte blkStatus = metaFileUtil.readByte(getChunkOffset(i));
+            if (predicate.test(blkStatus)) {
+                ids.add(i);
             }
         }
-        Collections.sort(notAckedBlkIdList);
-        return notAckedBlkIdList;
+        return ids;
+    }
+
+    public List<Integer> getNotChuckIdList() {
+        return this.getStatusList((b) -> b == NOT_CHUNK);
+    }
+
+    public List<Integer> getNotSendIdList() {
+        return this.getStatusList((b) -> b == NOT_SEND);
+    }
+
+    public List<Integer> getSendingIdList() {
+        return this.getStatusList((b) -> b == SENDING);
+    }
+
+    public List<Integer> getAckedIdList() {
+        return this.getStatusList((b) -> b == ACKED);
+    }
+
+    public List<Integer> getNotSendAndSendingIdList() {
+        return this.getStatusList((b) -> b == NOT_SEND || b == SENDING);
+    }
+
+    public boolean uploadIsDone() {
+//        return getNotSendIdList().isEmpty() && getNotSendIdList().isEmpty() && getSendingIdList().isEmpty();
+
+        return getAckedIdList().size() == (int) srcFileUtil.getChunkCount(CHUNK_SIZE);
     }
 }

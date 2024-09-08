@@ -1,10 +1,12 @@
 package com.hasten;
 
-import com.hasten.sim.FileUtil;
-import com.hasten.sim.SingleFileUploader;
+import com.hasten.sim.*;
+import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.CountDownLatch;
 
 
@@ -15,13 +17,35 @@ class MockClientTest {
     public static final String SMALL_FILE = "text.txt";
     CountDownLatch countDownLatch = new CountDownLatch(2);
 
+    public static final BlockingQueue<Block> blockQueue = new ArrayBlockingQueue<>(10);
+
+    public static final BlockingQueue<Block> ackQueue = new ArrayBlockingQueue<>(10);
+
+    @SneakyThrows
     @Test
     public void testMockClient() throws IOException, InterruptedException {
-        SingleFileUploader uploader = new SingleFileUploader(BIG_FILE);
-        uploader.uploadFile(false);
+
+        new Thread(this::testServer).start();
+        SingleFileUploader uploader = new SingleFileUploader(SMALL_FILE, blockQueue, ackQueue);
+
+        uploader.getMetaFile().printMetaFile();
+        uploader.uploadFile();
+        uploader.getMetaFile().printMetaFile();
+//        uploader.getBlockQueue().printQueueStatus();
 
 //        uploader.mergeChunk();
     }
+
+    public void testServer() {
+
+        try {
+            SingleFileAcceptor singleFileAcceptor = new SingleFileAcceptor(blockQueue, ackQueue);
+        }
+        catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
     @Test
     public void testFileUtil() throws IOException, InterruptedException {

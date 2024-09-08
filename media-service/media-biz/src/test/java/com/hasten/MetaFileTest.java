@@ -22,7 +22,7 @@ class MetaFileTest {
     public void testMeta() throws IOException {
 
         MetaFile metaFile = new MetaFile(SMALL_FILE);
-        metaFile.readMetaFile();
+        metaFile.printMetaFile();
     }
 
     @Test
