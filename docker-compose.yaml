@@ -1,0 +1,35 @@
+services:
+#  nacos01:
+#    image: nacos/nacos-server:v2.1.0-slim
+#    container_name: nacos01
+#    environment:
+#      env_file:
+#        - /home/john/docker_app/nacos/custom.env
+#      port:
+#        - "8848:8848"
+#        - "9848:9848"
+#        - "9849:9849"
+#      networks:
+#        - hm-net
+  media-biz:
+
+    image: media-biz:1.0
+    container_name: media-biz
+    ports:
+      - "9082:9082"
+    networks:
+      - hm-net
+
+
+  content-biz:
+    image: content-biz:1.0
+    container_name: content-biz
+    ports:
+      - "9081:9081"
+    networks:
+      - hm-net
+
+networks:
+  hm-net:
+    external: true
+

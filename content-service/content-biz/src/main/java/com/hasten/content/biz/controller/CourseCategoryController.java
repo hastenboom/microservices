@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Hasten
  */
 @RestController
-@RequestMapping("/course-category")
+@RequestMapping("/content/course-category")
 @RequiredArgsConstructor
 public class CourseCategoryController {
 

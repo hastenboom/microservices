@@ -7,6 +7,7 @@
       <directory url="file://$PROJECT_DIR$/system-service/system-biz/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/system-service/system-domain/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/gateway-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/login-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
@@ -14,49 +15,32 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="system-domain" />
         <module name="media-domain" />
         <module name="content-biz" />
-        <module name="system-api" />
         <module name="media-api" />
         <module name="common" />
         <module name="gateway-service" />
-        <module name="content-domain" />
         <module name="media-biz" />
+        <module name="content-domain" />
         <module name="content-api" />
-        <module name="system-biz" />
+        <module name="login-biz" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="domain" target="11" />
-      <module name="item-biz" target="11" />
-      <module name="item-biz.main" target="11" />
-      <module name="item-biz.test" target="11" />
-      <module name="item-client" target="21" />
-      <module name="item-client.main" target="11" />
-      <module name="item-client.test" target="11" />
-      <module name="item-domain" target="11" />
-      <module name="oh_my_item" target="11" />
-      <module name="oh_my_micor_cart" target="11" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common" options="-parameters" />
       <module name="content-biz" options="-parameters" />
       <module name="content-domain" options="-parameters" />
-      <module name="content-service" options="" />
+      <module name="content-service" options="-parameters" />
       <module name="gateway-service" options="-parameters" />
+      <module name="login-biz" options="-parameters" />
+      <module name="login-service" options="-parameters" />
       <module name="media-api" options="-parameters" />
       <module name="media-biz" options="-parameters" />
       <module name="media-domain" options="-parameters" />
       <module name="media-service" options="-parameters" />
-      <module name="oh_my_item" options="-parameters" />
-      <module name="oh_my_micor_cart" options="-parameters" />
-      <module name="oh_my_micro" options="" />
-      <module name="system-api" options="-parameters" />
-      <module name="system-biz" options="-parameters" />
-      <module name="system-domain" options="-parameters" />
+      <module name="oh_my_micro" options="-parameters" />
     </option>
   </component>
 </project>

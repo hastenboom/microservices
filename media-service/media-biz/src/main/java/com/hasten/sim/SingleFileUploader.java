@@ -2,7 +2,6 @@ package com.hasten.sim;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.var;
 
 import java.io.File;
 import java.io.IOException;
@@ -68,7 +67,7 @@ public class SingleFileUploader {
 
         countDownLatch = new CountDownLatch(notChuckIdList.size() + notSendAndSendingIdList.size());
         //upload
-        for (var i : notSendAndSendingIdList) {
+        for (Integer i : notSendAndSendingIdList) {
             uploadChunkPool.execute(new UploadChunkTask(i));
         }
 
@@ -91,7 +90,7 @@ public class SingleFileUploader {
                 /*more status should be considered, but handle only the ack here*/
                 metaFile.setChunkStatus(blk.getBlockId(), MetaFile.ACKED);
                 countDownLatch.countDown();
-                if(metaFile.uploadIsDone()){
+                if (metaFile.uploadIsDone()) {
                     break;
                 }
             }

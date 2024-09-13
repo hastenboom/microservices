@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: login-service
+  profiles:
+    active: dev
+
+  cloud:
+    nacos:
+      server-addr: 192.168.56.1:8848
+      config:
+        file-extension: yaml
+        shared-configs:
+          - data-id: shared-jdbc.yaml
+          - data-id: shared-log.yaml

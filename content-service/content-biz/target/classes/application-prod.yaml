@@ -1,0 +1,4 @@
+hm:
+  db:
+    host: mysql01
+    port: 3306

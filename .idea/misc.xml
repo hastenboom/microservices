@@ -28,6 +28,7 @@
         <option value="$PROJECT_DIR$/media-service/media-api/pom.xml" />
         <option value="$PROJECT_DIR$/media-service/media-biz/pom.xml" />
         <option value="$PROJECT_DIR$/media-service/media-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/login-service/login-biz/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -35,6 +36,7 @@
         <option value="$PROJECT_DIR$/content-service/domain/pom.xml" />
         <option value="$PROJECT_DIR$/oh_my_item/pom.xml" />
         <option value="$PROJECT_DIR$/oh_my_micor_cart/pom.xml" />
+        <option value="$PROJECT_DIR$/system-service/pom.xml" />
       </set>
     </option>
   </component>

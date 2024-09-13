@@ -1,0 +1,2 @@
+nacos:
+  server-addr: nacos01:8848

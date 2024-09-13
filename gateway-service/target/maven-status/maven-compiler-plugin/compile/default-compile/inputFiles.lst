@@ -1,0 +1,6 @@
+D:\dev\projects\my_micro\oh_my_micro\gateway-service\src\main\java\com\hasten\gateway\config\AuthProperties.java
+D:\dev\projects\my_micro\oh_my_micro\gateway-service\src\main\java\com\hasten\gateway\config\SecurityConfig.java
+D:\dev\projects\my_micro\oh_my_micro\gateway-service\src\main\java\com\hasten\gateway\filter\MyGlobalFilter.java
+D:\dev\projects\my_micro\oh_my_micro\gateway-service\src\main\java\com\hasten\gateway\util\JwtUtil.java
+D:\dev\projects\my_micro\oh_my_micro\gateway-service\src\main\java\com\hasten\gateway\config\JwtProperties.java
+D:\dev\projects\my_micro\oh_my_micro\gateway-service\src\main\java\com\hasten\gateway\GatewayApp.java

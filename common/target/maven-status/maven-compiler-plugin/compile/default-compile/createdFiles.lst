@@ -1,0 +1,14 @@
+com\hasten\common\UserInfoHolder.class
+com\hasten\common\exception\RestErrorResponse.class
+com\hasten\common\domain\PageResult.class
+com\hasten\common\exception\ValidationGroup$Delete.class
+com\hasten\common\domain\Result.class
+com\hasten\common\filter\UserFilter.class
+com\hasten\common\exception\ValidationGroup$Update.class
+com\hasten\common\domain\PageParams.class
+com\hasten\common\exception\XueChengPlusException.class
+com\hasten\common\exception\CommonError.class
+com\hasten\common\config\MvcConfig.class
+com\hasten\common\exception\ValidationGroup$Insert.class
+com\hasten\common\exception\ValidationGroup.class
+com\hasten\common\exception\GlobalExceptionHandler.class

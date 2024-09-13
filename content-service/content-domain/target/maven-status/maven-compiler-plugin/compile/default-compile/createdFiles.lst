@@ -1,0 +1,16 @@
+com\hasten\content\domain\entity\MqMessage.class
+com\hasten\content\domain\entity\MqMessageHistory.class
+com\hasten\content\domain\entity\Teachplan.class
+com\hasten\content\domain\dto\CourseBaseInfoDto.class
+com\hasten\content\domain\entity\CoursePublish.class
+com\hasten\content\domain\dto\AddCourseDto.class
+com\hasten\content\domain\entity\CourseBase.class
+com\hasten\content\domain\dto\QueryCourseParamsDto.class
+com\hasten\content\domain\entity\TeachplanMedia.class
+com\hasten\content\domain\entity\CourseAudit.class
+com\hasten\content\domain\entity\CoursePublishPre.class
+com\hasten\content\domain\entity\CourseTeacher.class
+com\hasten\content\domain\entity\CourseCategory.class
+com\hasten\content\domain\entity\TeachplanWork.class
+com\hasten\content\domain\dto\CategoryTreeNode.class
+com\hasten\content\domain\entity\CourseMarket.class

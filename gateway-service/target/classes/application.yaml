@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 9080
 
 spring:
   application:
@@ -14,3 +14,24 @@ spring:
           uri: lb://content-service
           predicates:
             - Path=/content/**
+        - id: login-service
+          uri: lb://login-service
+          predicates:
+            - Path=/login, /logout, /getCode, /loginWithCode
+
+  redis:
+    password: 123456
+    host: 127.0.0.1
+    port: 6379
+
+
+hm:
+  jwt:
+    location: classpath:hmall.jks
+    alias: hmall
+    password: hmall123
+    tokenTTL: 30m
+  auth:
+    excluePaths:
+      - /search/**
+      - /users/login

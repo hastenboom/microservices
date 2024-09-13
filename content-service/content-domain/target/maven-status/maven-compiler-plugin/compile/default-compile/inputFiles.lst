@@ -1,0 +1,16 @@
+D:\dev\projects\my_micro\oh_my_micro\content-service\content-domain\src\main\java\com\hasten\content\domain\dto\QueryCourseParamsDto.java
+D:\dev\projects\my_micro\oh_my_micro\content-service\content-domain\src\main\java\com\hasten\content\domain\entity\CourseMarket.java
+D:\dev\projects\my_micro\oh_my_micro\content-service\content-domain\src\main\java\com\hasten\content\domain\dto\CourseBaseInfoDto.java
+D:\dev\projects\my_micro\oh_my_micro\content-service\content-domain\src\main\java\com\hasten\content\domain\entity\CourseTeacher.java
+D:\dev\projects\my_micro\oh_my_micro\content-service\content-domain\src\main\java\com\hasten\content\domain\entity\TeachplanWork.java
+D:\dev\projects\my_micro\oh_my_micro\content-service\content-domain\src\main\java\com\hasten\content\domain\entity\CourseBase.java
+D:\dev\projects\my_micro\oh_my_micro\content-service\content-domain\src\main\java\com\hasten\content\domain\entity\CoursePublish.java
+D:\dev\projects\my_micro\oh_my_micro\content-service\content-domain\src\main\java\com\hasten\content\domain\entity\TeachplanMedia.java
+D:\dev\projects\my_micro\oh_my_micro\content-service\content-domain\src\main\java\com\hasten\content\domain\entity\CourseAudit.java
+D:\dev\projects\my_micro\oh_my_micro\content-service\content-domain\src\main\java\com\hasten\content\domain\entity\CourseCategory.java
+D:\dev\projects\my_micro\oh_my_micro\content-service\content-domain\src\main\java\com\hasten\content\domain\dto\AddCourseDto.java
+D:\dev\projects\my_micro\oh_my_micro\content-service\content-domain\src\main\java\com\hasten\content\domain\dto\CategoryTreeNode.java
+D:\dev\projects\my_micro\oh_my_micro\content-service\content-domain\src\main\java\com\hasten\content\domain\entity\CoursePublishPre.java
+D:\dev\projects\my_micro\oh_my_micro\content-service\content-domain\src\main\java\com\hasten\content\domain\entity\MqMessageHistory.java
+D:\dev\projects\my_micro\oh_my_micro\content-service\content-domain\src\main\java\com\hasten\content\domain\entity\MqMessage.java
+D:\dev\projects\my_micro\oh_my_micro\content-service\content-domain\src\main\java\com\hasten\content\domain\entity\Teachplan.java

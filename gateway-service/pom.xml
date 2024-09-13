@@ -11,7 +11,16 @@
     <url>http://maven.apache.org</url>
 
 
+    <!--TODO:Modify me,2.add spring security -->
+
     <dependencies>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-redis</artifactId>
+        </dependency>
+        <!--        Reactive gateway-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
@@ -30,11 +39,18 @@
     </dependencies>
 
     <build>
-        <finalName>${project.artifactId}</finalName>
+        <finalName>${project.artifactId}-${project.version}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

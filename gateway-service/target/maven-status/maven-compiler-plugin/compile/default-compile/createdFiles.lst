@@ -1,0 +1,6 @@
+com\hasten\gateway\util\JwtUtil.class
+com\hasten\gateway\config\SecurityConfig.class
+com\hasten\gateway\filter\MyGlobalFilter.class
+com\hasten\gateway\config\AuthProperties.class
+com\hasten\gateway\GatewayApp.class
+com\hasten\gateway\config\JwtProperties.class

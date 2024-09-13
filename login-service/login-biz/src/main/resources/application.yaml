@@ -1,0 +1,21 @@
+server:
+  port: 9085
+
+
+#FIXME: ignore this, faulted db
+hm:
+  db:
+    database: xc402_content
+
+
+spring:
+  redis:
+    password: 123456
+    host: 127.0.0.1
+    port: 6379
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: admin
+    password: 123456
+    virtual-host: /

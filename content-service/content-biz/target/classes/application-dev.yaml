@@ -1,3 +1,4 @@
-db:
-  host: localhost
-  password: 123456
+hm:
+  db:
+    host: localhost
+    password: 123456

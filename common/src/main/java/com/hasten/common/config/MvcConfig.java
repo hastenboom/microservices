@@ -1,5 +1,6 @@
 package com.hasten.common.config;
 
+import com.hasten.common.filter.UserFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
@@ -28,14 +29,10 @@ public class MvcConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-
-        registry.addInterceptor(new HandlerInterceptor() {
-            @Override
-            public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-                System.out.println("!!!!wow, you've been intercepted!!!!!");
-                return HandlerInterceptor.super.preHandle(request, response, handler);
-            }
-        });
+        registry.addInterceptor(new UserFilter())
+                .excludePathPatterns("/login", "/logout", "/register", "/captcha", "/swagger-ui.html", "/webjars/**",
+                        "/v2/**", "/swagger-resources/**", "/doc.html", "/swagger-resources/configuration/ui",
+                        "/swagger-resources/configuration/security");
     }
 
 
